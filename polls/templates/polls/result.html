@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>result</title>
+</head>
+<body>
+    질문 : {{ question.question_text }}<br><br>
+
+    <!--{{ question.choice_set.all }}<br><br> &lt;!&ndash; 이렇게 쓰면 모든 보기가 출력됨(ORM이라 가능한 것 choice_set) &ndash;&gt;-->
+
+    [ 투표결과 ] <br>
+    {% for choice in question.choice_set.all %}
+        {{ choice.choice_text }} --> {{ choice.votes }}<br>
+    {% endfor %}
+
+</body>
+</html>

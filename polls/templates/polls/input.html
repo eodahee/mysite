@@ -1,0 +1,6 @@
+<form action="add_question/" method="post">
+    <input type="text" name="text">
+
+    {% csrf_token %}
+    <input type="submit" value="추가">
+</form>

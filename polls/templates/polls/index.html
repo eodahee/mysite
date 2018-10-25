@@ -1,0 +1,11 @@
+<ul>
+{% for q in question %}
+    <li>
+        <!-- 상대경로 = 현재경로 + 입력된 경로-->
+        <!--<a href="{{ q.id }}">-->
+        <a href="{% url 'detail' q.id %}">
+        {{q.question_text}}
+        </a>
+    </li>
+{% endfor %}
+</ul>
